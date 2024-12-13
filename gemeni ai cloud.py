@@ -10,7 +10,7 @@ import os
 line_bot_api = LineBotApi(os.environ.get('Line_bot_token'))
 handler = WebhookHandler(os.environ.get('Line_bot_secret'))
 
-genai.configure(os.environ.get('Line_bot_api_key'))
+genai.configure(os.environ.get('gemeni_api_key'))
 @app.route("/callback", methods=['POST'])
 def callback():
     signature = request.headers['X-Line-Signature']
